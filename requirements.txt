@@ -1,2 +1,3 @@
+streamlit>=3.8
 pandas
 openpyxl
