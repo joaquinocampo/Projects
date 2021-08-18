@@ -19,7 +19,7 @@ def tower_sidebar(first_name, last_name):
 def map_function():
     df = pd.read_excel("skyscrapers.xlsx")
     df = df.rename(columns={"Lat": "lat", "Lon": "lon"})
-    map_check = st.beta_expander("Click this expander to view map of skyscrapers")
+    map_check = st.expander("Click this expander to view map of skyscrapers")
     with map_check:
         st.write("### Map of All Skyscraper Locations")
         map_data = pd.DataFrame(df)
@@ -27,7 +27,7 @@ def map_function():
 
 
 def skyscraper_function():
-    skyscraper_check = st.beta_expander("Click this expander to see data visualization")
+    skyscraper_check = st.expander("Click this expander to see data visualization")
     with skyscraper_check:
         df = pd.read_excel("skyscrapers.xlsx")
         st.write("### Frequency Count of Skyscrapers in Each Country")
@@ -43,7 +43,7 @@ def skyscraper_function():
 def filter_function():
     tower_count = 1
 
-    filter_check = st.beta_expander("Click this expander to filter out skyscraper data")
+    filter_check = st.expander("Click this expander to filter out skyscraper data")
     with filter_check:
         df = pd.read_excel("skyscrapers.xlsx")
 
